@@ -58,11 +58,14 @@ async function loadHardcodedBlogs() {
 }
 
 // ==============================
-// 🌐 LOAD CMS BLOGS
+// 🌐 LOAD CMS BLOGS ← FIXED HERE!
 // ==============================
 async function loadCMSBlogs() {
   try {
-   const res = await fetch("/api/cms-blogs"); // Your own backend endpoint
+    // ✅ FIXED — correct Contentful URL
+    const res = await fetch(
+      `https://cdn.contentful.com/spaces/${SPACE_ID}/entries?content_type=${CONTENT_TYPE}&order=-sys.createdAt&access_token=${ACCESS_TOKEN}`
+    );
     const data = await res.json();
     const container = document.getElementById("cms-list");
     container.innerHTML = "";
@@ -142,17 +145,14 @@ async function loadHardcodedDetail(id) {
       return;
     }
 
-    // Set page title
     document.getElementById("page-title").innerText = blog.title;
 
-    // Build body HTML
     const bodyHTML = blog.body.map(block => {
       if (block.type === "paragraph") return `<p>${block.text}</p>`;
       if (block.type === "heading")   return `<h2>${block.text}</h2>`;
       return "";
     }).join("");
 
-    // Build CTA HTML
     const ctaHTML = blog.cta ? `
       <div class="cta-box">
         <h3>${blog.cta.title}</h3>
@@ -209,13 +209,10 @@ async function loadCMSDetail(slug) {
     const fields = post.fields;
     const container = document.getElementById("blog-detail");
 
-    // ✅ Console log to check field names
     console.log("All fields from Contentful:", fields);
 
-    // Set page title
     document.getElementById("page-title").innerText = fields.title;
 
-    // ✅ Try all possible body field names
     const bodyData =
       fields.body ||
       fields.content ||
@@ -225,21 +222,17 @@ async function loadCMSDetail(slug) {
 
     console.log("Body data found:", bodyData);
 
-    // Render body
     const body = bodyData
       ? renderRichText(bodyData)
       : "<p>No content available for this blog.</p>";
 
-    // Author
     const authorName =
       fields.authorName ||
       fields.author ||
       "Unknown";
 
-    // Date
     const date = new Date(post.sys.createdAt).toDateString();
 
-    // CTA
     const ctaHTML = fields.ctaTitle && fields.ctaLink ? `
       <div class="cta-box">
         <h3>${fields.ctaTitle}</h3>
@@ -283,7 +276,6 @@ function renderRichText(body) {
 
   return body.content.map(block => {
 
-    // PARAGRAPH
     if (block.nodeType === "paragraph") {
       const text = block.content?.map(node => {
         if (node.nodeType === "text") {
@@ -302,7 +294,6 @@ function renderRichText(body) {
       return text ? `<p>${text}</p>` : "";
     }
 
-    // HEADINGS
     if (block.nodeType === "heading-1") {
       const text = block.content?.map(n => n.value).join("") || "";
       return `<h1>${text}</h1>`;
@@ -320,7 +311,6 @@ function renderRichText(body) {
       return `<h4>${text}</h4>`;
     }
 
-    // UNORDERED LIST
     if (block.nodeType === "unordered-list") {
       const items = block.content?.map(item => {
         const text = item.content?.[0]?.content?.map(n => n.value).join("") || "";
@@ -329,7 +319,6 @@ function renderRichText(body) {
       return `<ul>${items}</ul>`;
     }
 
-    // ORDERED LIST
     if (block.nodeType === "ordered-list") {
       const items = block.content?.map(item => {
         const text = item.content?.[0]?.content?.map(n => n.value).join("") || "";
@@ -338,20 +327,17 @@ function renderRichText(body) {
       return `<ol>${items}</ol>`;
     }
 
-    // BLOCKQUOTE
     if (block.nodeType === "blockquote") {
       const text = block.content?.[0]?.content?.map(n => n.value).join("") || "";
       return `<blockquote>${text}</blockquote>`;
     }
 
-    // HORIZONTAL RULE
     if (block.nodeType === "hr") return `<hr/>`;
 
-    // EMBEDDED ASSET (images inside blog)
     if (block.nodeType === "embedded-asset-block") {
       const assetId = block.data?.target?.sys?.id;
       if (assetId) {
-        return `<div class="embedded-image-placeholder">📷 Image (ID: ${assetId})</div>`;
+        return `<div class="embedded-image-placeholder">📷 Image</div>`;
       }
       return "";
     }
