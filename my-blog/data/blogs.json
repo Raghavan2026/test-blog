@@ -1,0 +1,139 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Artificial Intelligence",
+    "slug": "future-of-artificial-intelligence",
+    "author": "Raghavan A",
+    "authorImage": "https://i.pravatar.cc/150?img=1",
+    "date": "April 20, 2025",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "thumbnail": "https://picsum.photos/seed/blog1/800/400",
+    "excerpt": "Artificial intelligence is transforming every industry. Here is what the future holds for AI and how it will impact our daily lives.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Artificial Intelligence has come a long way from being a science fiction concept to becoming an integral part of our daily lives. From voice assistants to recommendation systems, AI is everywhere."
+      },
+      {
+        "type": "heading",
+        "text": "How AI is Changing Industries"
+      },
+      {
+        "type": "paragraph",
+        "text": "Industries like healthcare, finance, and education are being revolutionized by AI. Doctors are using AI to diagnose diseases earlier, banks are using it to detect fraud, and teachers are using it to personalize learning."
+      },
+      {
+        "type": "heading",
+        "text": "What the Future Holds"
+      },
+      {
+        "type": "paragraph",
+        "text": "In the next decade, we can expect AI to become even more integrated into our lives. Self-driving cars, personalized medicine, and smart cities are just the beginning of what AI can achieve."
+      },
+      {
+        "type": "paragraph",
+        "text": "However, with great power comes great responsibility. As AI becomes more powerful, we need to ensure that it is developed and used ethically and responsibly."
+      }
+    ],
+    "cta": {
+      "title": "Want to Learn More About AI?",
+      "link": "/contact.html",
+      "buttonText": "Talk To Our Experts"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Top 10 UI Design Principles Every Designer Should Know",
+    "slug": "top-10-ui-design-principles",
+    "author": "Priya S",
+    "authorImage": "https://i.pravatar.cc/150?img=5",
+    "date": "April 22, 2025",
+    "category": "Design",
+    "readTime": "4 min read",
+    "thumbnail": "https://picsum.photos/seed/blog2/800/400",
+    "excerpt": "Good design is not just about making things look pretty. It is about creating experiences that are intuitive, accessible, and enjoyable for users.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "UI design is both an art and a science. Great designers understand the principles that make interfaces intuitive and enjoyable to use. Here are the top 10 principles every designer should know."
+      },
+      {
+        "type": "heading",
+        "text": "1. Clarity Above All"
+      },
+      {
+        "type": "paragraph",
+        "text": "The most important principle in UI design is clarity. Users should never have to guess what something does. Every element on the screen should have a clear purpose and communicate it effectively."
+      },
+      {
+        "type": "heading",
+        "text": "2. Consistency is Key"
+      },
+      {
+        "type": "paragraph",
+        "text": "Consistent design helps users learn your interface faster. Use the same colors, fonts, and patterns throughout your design to create a cohesive experience."
+      },
+      {
+        "type": "heading",
+        "text": "3. Feedback and Response"
+      },
+      {
+        "type": "paragraph",
+        "text": "Every action a user takes should have a visible response. Whether it is a button click, form submission, or page load, always provide feedback to let users know their action was registered."
+      }
+    ],
+    "cta": {
+      "title": "Need a UI Design for Your Project?",
+      "link": "/contact.html",
+      "buttonText": "Get a Free Consultation"
+    }
+  },
+  {
+    "id": 3,
+    "title": "How to Grow Your Business with Digital Marketing",
+    "slug": "grow-business-digital-marketing",
+    "author": "Kumar M",
+    "authorImage": "https://i.pravatar.cc/150?img=3",
+    "date": "April 25, 2025",
+    "category": "Marketing",
+    "readTime": "6 min read",
+    "thumbnail": "https://picsum.photos/seed/blog3/800/400",
+    "excerpt": "Digital marketing is one of the most powerful tools available to businesses today. Learn how to use it effectively to grow your business.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "In today's digital world, having a strong online presence is essential for business growth. Digital marketing encompasses all marketing efforts that use the internet or electronic devices."
+      },
+      {
+        "type": "heading",
+        "text": "Search Engine Optimization (SEO)"
+      },
+      {
+        "type": "paragraph",
+        "text": "SEO is the process of optimizing your website to rank higher in search engine results. By targeting the right keywords and creating quality content, you can drive organic traffic to your website."
+      },
+      {
+        "type": "heading",
+        "text": "Social Media Marketing"
+      },
+      {
+        "type": "paragraph",
+        "text": "Social media platforms like Instagram, LinkedIn, and Twitter are powerful channels for reaching your target audience. Regular posting, engagement, and paid advertising can significantly boost your brand visibility."
+      },
+      {
+        "type": "heading",
+        "text": "Email Marketing"
+      },
+      {
+        "type": "paragraph",
+        "text": "Email marketing remains one of the highest ROI digital marketing channels. Building an email list and sending targeted campaigns can help you nurture leads and convert them into customers."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Grow Your Business?",
+      "link": "/contact.html",
+      "buttonText": "Start Your Journey"
+    }
+  }
+]

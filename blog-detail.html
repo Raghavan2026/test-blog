@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Blog</title>
+  <title id="page-title">Blog Post</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,44 +13,21 @@
     <a href="index.html" class="logo">MyBlog</a>
     <nav>
       <a href="index.html">Home</a>
-      <a href="#hardcoded-section">Articles</a>
-      <a href="#cms-section">Latest</a>
     </nav>
     <a href="/contact.html" class="header-cta">Contact Us</a>
   </header>
 
-  <!-- HERO BANNER -->
-  <section class="hero-banner">
-    <div class="hero-content">
-      <h1>Welcome to Our Blog</h1>
-      <p>Discover articles, insights and stories from our team</p>
-    </div>
-  </section>
+  <!-- BACK BUTTON -->
+  <div class="back-wrapper">
+    <a href="index.html" class="back-btn">← Back to Blogs</a>
+  </div>
 
-  <!-- HARDCODED BLOGS SECTION -->
-  <section class="blog-section" id="hardcoded-section">
-    <div class="section-header">
-      <h2>Featured Articles</h2>
-      <p>Hand picked articles from our team</p>
-    </div>
-    <div id="hardcoded-list" class="blog-grid">
+  <!-- BLOG DETAIL -->
+  <main class="detail-wrapper">
+    <div id="blog-detail">
       <div class="loading-spinner">Loading...</div>
     </div>
-  </section>
-
-  <!-- DIVIDER -->
-  <div class="section-divider"></div>
-
-  <!-- CMS BLOGS SECTION -->
-  <section class="blog-section" id="cms-section">
-    <div class="section-header">
-      <h2>Latest From CMS</h2>
-      <p>Fresh content published from our content team</p>
-    </div>
-    <div id="cms-list" class="blog-grid">
-      <div class="loading-spinner">Loading...</div>
-    </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -73,7 +50,7 @@
 
   <script src="main.js"></script>
   <script>
-    loadAllBlogs();
+    loadBlogDetail();
   </script>
 
 </body>
