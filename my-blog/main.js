@@ -62,9 +62,7 @@ async function loadHardcodedBlogs() {
 // ==============================
 async function loadCMSBlogs() {
   try {
-    const res = await fetch(
-      `https://cdn.contentful.com/spaces/${SPACE_ID}/entries?content_type=${CONTENT_TYPE}&order=-sys.createdAt&access_token=${ACCESS_TOKEN}`
-    );
+   const res = await fetch("/api/cms-blogs"); // Your own backend endpoint
     const data = await res.json();
     const container = document.getElementById("cms-list");
     container.innerHTML = "";
